@@ -16,7 +16,7 @@ node ('Ubuntu-app-agent'){
     }
     stage('Post-to-dockerhub') {
     
-     docker.withRegistry('https://registry.hub.docker.com', 'training_creds') {
+     docker.withRegistry('https://registry.hub.docker.com', 'reni2study') {
             app.push("latest")
         			}
          }

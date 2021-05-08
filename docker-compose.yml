@@ -1,7 +1,7 @@
 version: '2'
 services:
   snake:
-    image: 'reni2study/snake:new'
+    image: 'reni2study/snake'
     environment:
       - "PORT:3000"
     ports:

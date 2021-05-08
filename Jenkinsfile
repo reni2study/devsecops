@@ -4,7 +4,6 @@ node ('Ubuntu-App-Server-Agent'){
         /* Let's make sure we have the repository cloned to our workspace */
        checkout scm
     }  
-    
     stage('Build-and-Tag') {
     /* This builds the actual image; synonymous to
          * docker build on the command line */
@@ -15,8 +14,7 @@ node ('Ubuntu-App-Server-Agent'){
      docker.withRegistry('https://registry.hub.docker.com', 'reni2study') {
             app.push("latest")
         			}
-         }
-    
+         }    
     stage('Pull-image-server') {
     
          sh "docker-compose down"
